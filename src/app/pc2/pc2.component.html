@@ -1,0 +1,20 @@
+<p-table [value]="products" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Actions</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body">
+      <tr *ngFor="let profiles of profile">
+          <td>{{profiles.id}}</td>
+          <td>{{profiles.nom}}</td>
+          <td>{{profiles.age}}</td>
+          <td>
+            <p-button label="show" [routerLink]="" icon="pi pi-check"></p-button>
+          </td>
+      </tr>
+  </ng-template>
+</p-table>
